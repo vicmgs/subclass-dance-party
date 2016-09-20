@@ -44,6 +44,16 @@ $(document).ready(function() {
     });
   });
 
+  //Spread out dancers
+  $('.spreadOut').on('click', function(event) {
+
+    window.dancers.forEach(function(dancer) {
+      var top = $("body").height() * Math.random();
+      var left = $("body").width() * Math.random();
+      dancer.lineUp(top, left);
+    });
+  });
+
   //change background image
   $('.changeBG').on('click', function(event) {
     if (window.count === 3){
@@ -58,6 +68,12 @@ $(document).ready(function() {
     });
     count++;
   });
+
+  //dancer interaction
+  //track positions of mouseDancer and zoomDancer
+    //if positions are equal
+      //make mouseDancer do....
+      //make zoomDancer do...
 
 
 });

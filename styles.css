@@ -5,22 +5,32 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
-  /*background-image : url(images/bg1.jpg);
-  background-size : cover;*/
+  background-image : url(images/bg3.jpg);
+  background-size : cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.addDancerButton{
   padding:5px 12px;
   float:right;
 }
+.stageButton{
+  padding:5px 12px;
+  float:left;
+}
+
 .topbar{
-  height:32px;
-  background-color: #555;
+  height:45px;
+  background-color: white;
 }
 .title{
   background-color: #777;
+}
+.btn{
+  background-color: white;
+  font-size: 20px !important;
+  font-weight: 900 !important;
 }
 .blinky{
   position:absolute;
