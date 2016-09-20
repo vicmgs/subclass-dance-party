@@ -5,19 +5,19 @@ var makeMouseDancer = function(top, left, timeBetweenSteps) {
   this.$node.append('<img src="images/mouseDancer.png" style="height:130px">');
 
   // $('.mouseOver')
-  var context = this;
-  context.$node.bind({
-    mouseenter: function(e) {
-    context.$node.hide();},
-    mouseleave: function(e) {
-    context.$node.show();}
-  });
-
-  // }}).on('mouseenter', function(event) {
-  //   console.log(context);
-  //   context.$node.append('<p>this is weird</p>');
-  //
+  // var context = this;
+  // context.$node.bind({
+  //   mouseenter: function(e) {
+  //   context.$node.hide();},
+  //   mouseleave: function(e) {
+  //   context.$node.show();}
   // });
+  var context = this;
+  this.$node.on('mouseenter', function(event) {
+
+    context.$node.append('<p>this is weird</p>');
+
+  });
 };
 
 makeMouseDancer.prototype = Object.create(makeDancer.prototype);
