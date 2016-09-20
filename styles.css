@@ -21,13 +21,76 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .blinky{
-  border:10px solid red;
-  border-radius:10px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid yellow;
   position:absolute;
+  animation: move 4s infinite;
 }
 
-.rotate{
-  border:30px solid green;
+
+.fading{
+  border:10px solid green;
   border-radius:0px;
   position:absolute;
+  animation:fadein 2s infinite;
+  /*animation:bounce 4s linear infinite;*/
+}
+
+.zoomRotate{
+  border:10px solid blue;
+  border-radius:5px;
+  position:absolute;
+  animation:rotator 4s infinite;
+  /*animation:spin 4s linear infinite;*/
+  /*animation:bounce 4s linear infinite;*/
+}
+@-webkit-keyframes rotator {
+  0% { transform:rotate(0deg) scale(1) }
+  50% { transform:rotate(180deg) scale(2) }
+  100% { transform:rotate(360deg) scale(1) }
+  0% { border-color: blue; }
+  50% { border-color: white; }
+  100% { border-color: red; }
+}
+@-webkit-keyframes fadein {
+  0% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 0}
+}
+@-webkit-keyframes bounce {
+ from {
+   left: 0px;
+ }
+ to {
+   left: 200px;
+ }
+}
+@-webkit-keyframes move
+{
+  0% {
+      transform: translate3d(0px, 0px, 0px);
+      animation-timing-function: ease-in;
+  }
+  25% {
+      transform: translate3d(100px, 0px, 0px);
+      animation-timing-function: ease-out;
+  }
+  50% {
+      transform: translate3d(100px, 100px, 0px);
+      animation-timing-function: ease-in;
+  }
+  75% {
+      transform: translate3d(0px, 100px, 0px);
+      animation-timing-function: ease-out;
+  }
+  100% {
+      transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+.lineUp {
+  /*position: absolute;*/
 }
