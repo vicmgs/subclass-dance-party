@@ -20,8 +20,14 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
+.blinky{
   border:10px solid red;
   border-radius:10px;
+  position:absolute;
+}
+
+.rotate{
+  border:30px solid green;
+  border-radius:0px;
   position:absolute;
 }

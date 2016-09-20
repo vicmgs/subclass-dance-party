@@ -1,8 +1,8 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var makeRotateDancer = function(top, left, timeBetweenSteps) {
   // this.oldStep = makeDancer.prototype.step;
 
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.addClass('blinky');
+  this.$node.addClass('rotate');
 
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -12,12 +12,11 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
 
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+makeRotateDancer.prototype = Object.create(makeDancer.prototype);
 
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
-// makeBlinkyDancer.prototype.oldStep = makeDancer.prototype.step;
-makeBlinkyDancer.prototype.step = function() {
-  this.$node.toggle();
+makeRotateDancer.prototype.constructor = makeRotateDancer;
+// makeRotateDancer.prototype.oldStep = makeDancer.prototype.step;
+makeRotateDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   makeDancer.prototype.step.call(this);
 
@@ -27,11 +26,11 @@ makeBlinkyDancer.prototype.step = function() {
 
 };
 
-// makeBlinkyDancer.prototype.setPosition = function(top, left) {
+// makeRotateDancer.prototype.setPosition = function(top, left) {
 //
 //   // call the old version of step at the beginning of any call to this new version of step
 //   makeDancer.prototype.setPosition.call(this, top, left);
-//   this.$node.addClass('blinky');
+//   this.$node.addClass('rotate');
 //
 //   // toggle() is a jQuery method to show/hide the <span> tag.
 //   // See http://api.jquery.com/category/effects/ for this and
