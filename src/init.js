@@ -30,7 +30,10 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+
   });
+
+  //line up dancers
   $('.lineUp').on('click', function(event) {
     var top = 400;
     var left = 10+'%';
@@ -40,6 +43,8 @@ $(document).ready(function() {
       left = (Number(left.substring(0,2))+perc) + '%';
     });
   });
+
+  //change background image
   $('.changeBG').on('click', function(event) {
     if (window.count === 3){
       window.count = 0;
@@ -52,7 +57,7 @@ $(document).ready(function() {
       'background-repeat' : 'no-repeat'
     });
     count++;
-
-
   });
+
+
 });

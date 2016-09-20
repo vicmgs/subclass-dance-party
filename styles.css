@@ -27,7 +27,6 @@ body, a:link, a:visited, a:active{
   animation: move 4s infinite;
 }
 
-
 .fading{
   position:absolute;
   animation:fadein 2s infinite;
@@ -40,6 +39,13 @@ body, a:link, a:visited, a:active{
   /*animation:spin 4s linear infinite;*/
   /*animation:bounce 4s linear infinite;*/
 }
+
+.mouseOver{
+  position:absolute;
+  animation:bounce 4s linear infinite;
+
+}
+
 @-webkit-keyframes rotator {
   0% { transform:rotate(0deg) scale(1) }
   25% { transform:rotate(180deg) scale(1.5) }
@@ -52,10 +58,10 @@ body, a:link, a:visited, a:active{
 }
 @-webkit-keyframes bounce {
  from {
-   left: 0px;
+   left: 10%;
  }
  to {
-   left: 200px;
+   left: 90%;
  }
 }
 @-webkit-keyframes move

@@ -10,8 +10,8 @@ makeFadingDancer.prototype = Object.create(makeDancer.prototype);
 
 makeFadingDancer.prototype.constructor = makeFadingDancer;
 
-makeFadingDancer.prototype.step = function() {
-
-  makeDancer.prototype.step.call(this);
-
-};
+// makeFadingDancer.prototype.step = function() {
+//
+//   makeDancer.prototype.step.call(this);
+//
+// };

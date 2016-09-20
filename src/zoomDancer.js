@@ -10,8 +10,8 @@ makeZoomDancer.prototype = Object.create(makeDancer.prototype);
 
 makeZoomDancer.prototype.constructor = makeZoomDancer;
 
-makeZoomDancer.prototype.step = function() {
-
-  makeDancer.prototype.step.call(this);
-
-};
+// makeZoomDancer.prototype.step = function() {
+//
+//   makeDancer.prototype.step.call(this);
+//
+// };
