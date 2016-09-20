@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.count = 0;
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -38,5 +39,20 @@ $(document).ready(function() {
       dancer.lineUp(top, left);
       left = (Number(left.substring(0,2))+perc) + '%';
     });
+  });
+  $('.changeBG').on('click', function(event) {
+    if (window.count === 3){
+      window.count = 0;
+    }
+    var pics = ['url(images/bg1.jpg)', 'url(images/bg2.jpg)', 'url(images/bg3.jpg)'];
+
+    $('body').css({
+      'background-image' : pics[window.count],
+      'background-size' : 'cover',
+      'background-repeat' : 'no-repeat'
+    });
+    count++;
+
+
   });
 });

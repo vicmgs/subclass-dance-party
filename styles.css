@@ -5,6 +5,8 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  /*background-image : url(images/bg1.jpg);
+  background-size : cover;*/
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -21,27 +23,18 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .blinky{
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid yellow;
   position:absolute;
   animation: move 4s infinite;
 }
 
 
 .fading{
-  border:10px solid green;
-  border-radius:0px;
   position:absolute;
   animation:fadein 2s infinite;
   /*animation:bounce 4s linear infinite;*/
 }
 
 .zoomRotate{
-  border:10px solid blue;
-  border-radius:5px;
   position:absolute;
   animation:rotator 4s infinite;
   /*animation:spin 4s linear infinite;*/
@@ -49,11 +42,8 @@ body, a:link, a:visited, a:active{
 }
 @-webkit-keyframes rotator {
   0% { transform:rotate(0deg) scale(1) }
-  50% { transform:rotate(180deg) scale(2) }
+  25% { transform:rotate(180deg) scale(1.5) }
   100% { transform:rotate(360deg) scale(1) }
-  0% { border-color: blue; }
-  50% { border-color: white; }
-  100% { border-color: red; }
 }
 @-webkit-keyframes fadein {
   0% {opacity: 0}
@@ -89,8 +79,4 @@ body, a:link, a:visited, a:active{
   100% {
       transform: translate3d(0px, 0px, 0px);
   }
-}
-
-.lineUp {
-  /*position: absolute;*/
 }

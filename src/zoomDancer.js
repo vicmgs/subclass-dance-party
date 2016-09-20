@@ -2,6 +2,7 @@ var makeZoomDancer = function(top, left, timeBetweenSteps) {
 
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('zoomRotate');
+  this.$node.append('<img src="images/zoom.png" style="height:140px">');
 
 };
 
