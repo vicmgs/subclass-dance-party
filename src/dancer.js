@@ -4,6 +4,8 @@ var makeDancer = class makeDancer {
   constructor (top, left, timeBetweenSteps) {
     this.$node = $('<div class="dancer"></div>');
     this.timeBetweenSteps = timeBetweenSteps;
+    this.top = top;
+    this.left = left;
     this.setPosition(top, left);
 
   }
