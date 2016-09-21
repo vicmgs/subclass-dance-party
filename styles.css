@@ -37,6 +37,9 @@ body, a:link, a:visited, a:active{
   animation: move 4s infinite;
 }
 
+.runner{
+  position:absolute;
+}
 .fading{
   position:absolute;
   animation:fadein 2s infinite;

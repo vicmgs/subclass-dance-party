@@ -24,9 +24,9 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+      $("body").height() * 0.8 * Math.random() + 100,
+      $("body").width() * 0.8 * Math.random() + 100,
+      100
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
@@ -40,17 +40,38 @@ $(document).ready(function() {
     var perc = 80/window.dancers.length;
     window.dancers.forEach(function(dancer) {
       dancer.lineUp(top, left);
+      dancer.stop = true;
       left = (Number(left.substring(0,2))+perc) + '%';
+
+    });
+  });
+
+  //line up dancers
+  $('.slothStop').on('click', function(event) {
+    var top = 400;
+    var left = 10;
+
+    var slothdancers = window.dancers.filter(function(dancer){
+      return dancer.constructor === makeRunningDancer;
+    });
+    // var perc = 80/window.dancers.length;
+    slothdancers.forEach(function(dancer) {
+      dancer.top = top;
+      dancer.left = left;
+      dancer.stop = true;
+      dancer.lineUp(top, left);
+      // left = (Number(left.substring(0,2))+perc) + '%';
+
     });
   });
 
   //Spread out dancers
   $('.spreadOut').on('click', function(event) {
-
     window.dancers.forEach(function(dancer) {
-      var top = $("body").height() * Math.random();
-      var left = $("body").width() * Math.random();
+      var top = $("body").height() * 0.8 * Math.random() + 50;
+      var left = $("body").width() * 0.8 * Math.random() + 50;
       dancer.lineUp(top, left);
+      dancer.stop = false;
     });
   });
 
